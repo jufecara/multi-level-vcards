@@ -1826,6 +1826,51 @@
       return (!isset($mimes[strtolower($extension)])) ? "application/x-unknown-content-type" : 
                                                         $mimes[strtolower($extension)];
     }
+    
+    /**
+     * Set Protocol
+     * @param String $_protocol Protocol ('mail', 'sendmail', 'smtp')
+     */
+    public function SetProtocol($_protocol = 'mail')
+    {
+      $this->_protocol = $_protocol;
+    }
+    
+    /**
+     * Set SMTP Hostname
+     * @param String $_smtpHost Hostname
+     */
+    public function setSmtpHost($_smtpHost)
+    {
+      $this->_smtpHost = $_smtpHost;
+    }
+    
+    /**
+     * Set SMTP Port number
+     * @param Integer $_smtpPort Port number
+     */
+    public function setSmtpPort($_smtpPort = '25' )
+    {
+      $this->_smtpPort = $_smtpPort;
+    }
+    
+    /**
+     * Set SMTP Username
+     * @param String $_smtpUser Username
+     */
+    public function setSmtp($_smtpUser)
+    {
+      $this->_smtpUser = $_smtpUser;
+    }
+    
+    /**
+     * Set SMTP Password
+     * @param String $_smtpPass Password
+     */
+    public function setSmtpPass($_smtpPass)
+    {
+      $this->_smtpPass = $_smtpPass;
+    }
   }
 
 ?>
