@@ -39,6 +39,11 @@ if (is_valid_email_address()) {
  
     $geekMail = new geekMail(); 
     $geekMail->setMailType('text');
+    $geekMail->setProtocol("smtp");
+    $geekMail->setSmtpAuth(true);
+    $geekMail->setSmtpHost("hostname");
+    $geekMail->setSmtpPass("password");
+    $geekMail->setSmtpUser("user@domain.com");
  
     $geekMail->from('hire@neilcrosby.com', 'Neil Crosby');
     $geekMail->to($email);
